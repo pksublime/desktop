@@ -462,7 +462,7 @@ export async function createAuthorization(endpoint: string, login: string, passw
 
   const note = await getNote()
 
-  const response = await request(endpoint, authorization, 'POST', 'authorizations', {
+  const response = await request(endpoint, authorization, 'POST', 'v3/authorizations', {
     'scopes': Scopes,
     'client_id': ClientID,
     'client_secret': ClientSecret,
